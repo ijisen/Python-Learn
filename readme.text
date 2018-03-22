@@ -10,6 +10,8 @@ python calc.py  执行本地脚本
 .py文件名只能是英文字母、数字和下划线的组合
 
 
+
+
 print('hello word');
 print('hello word', 'hello jisen');
 
@@ -18,9 +20,15 @@ input
 	
 	
 Python程序是大小写敏感的
+# -*- coding: utf-8 -*- 声明文件格式
 
 
-# 注释语句。
+注释语句。
+#  单行注释
+'''  ''' 多行注释
+"""  """ 多行注释
+版本选择
+#!/usr/bin/python3 只适用于linux系统
 : 缩进的语句视为代码块。
 Python的语法采用缩进方式
 
@@ -44,6 +52,19 @@ r   //''表示''内部的字符串默认不转义  print(r'\\\t\\')   \\\t\\
 与|或|非  add|or|not
 
 常量 必须大写 PI = 3.14159265359
+
+数据类型
+|————— Number
+|      |————— Int() 整数
+|      |————— float() 整浮点型
+|      |————— Boolean() 布尔值
+|      |————— complex()  复数
+|————— String 字符串
+|————— List 有序列表
+|————— Tuple 有序元组
+|————— Sets 无序集合
+|————— Dict dictionary 字典
+
 
 
 
