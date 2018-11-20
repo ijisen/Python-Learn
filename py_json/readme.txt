@@ -1,2 +1,2 @@
-Python JSON
+Python 转 JSON
 |————— f = open(path)
