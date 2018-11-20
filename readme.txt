@@ -1,3 +1,8 @@
+#!/user/bin/python3
+# -*- coding: utf-8 -*-
+# Filename: readme.txt
+
+
 Python是一种计算机程序设计语言
 
 python 运行Python
@@ -143,13 +148,69 @@ r   //''表示''内部的字符串默认不转义  print(r'\\\t\\')   \\\t\\
 |      | 定义函数时，需要确定函数名和参数个数；
 |      | 如果有必要，可以先对参数的数据类型做检查；
 |      | 函数执行完毕也没有return语句时，自动return None。
+|————— 可变参数 *  可变参数在函数调用时自动组装为一个 tuple
+|      |————— eg: def_params_calc.py
+|————— 命名关键字参数 **  关键字参数在函数调用时自动组装为一个 dict
+|      |————— eg: def_params_key.py
 
 import 与 from...import
 |————— import path
 |————— from a import b, c
 |————— from a import *
 
+迭代器
+|————— iter() a = iter([1, 2, 3, 4, 5])
+|————— a = (x for x in range(10))
+|————— next() next(a)
 
+变量作用域 eg: var.py
+|————— L （Local） 局部作用域
+|————— E （Enclosing） 闭包函数外的函数中
+|————— G （Global） 全局作用域
+|————— B （Built-in） 内建作用域
+|————— L –> E –> G –> B 的规则查找，即：在局部找不到，便会去局部外的局部找（例如闭包），再找不到就会去全局找，再者去内建中找
+|————— 修改全局作用域 用 global eg： global.py
+|————— 修改闭包作用域 用 nonlocal eg： nonlocal.py
+
+切片(slice)
+|————— [[1, 2, 3, 4][0: 3]] 从索引0开始取，直到索引3为止，但不包括索引3
+|————— n[-1] #4
+
+isinstance
+|————— isinstance('av', str) 判断一个变量是不是字符串
+|————— isinstance([], iterable) 判断一个变量是否可迭代 from collections import Iterable
+
+内置函数
+|————— abs() 取绝对值
+|————— map(fn, Iterable)
+|————— reduce(fn, Iterable)
+|————— filter(fn, Iterable)
+|————— sorted(val, params)
+|      |————— sorted([36, 5, -12, 9, -21]) # [-21, -12, 5, 9, 36]
+|      |————— sorted([36, 5, -12, 9, -21], key=abs) #[5, 9, -12, -21, 36]
+|      |————— sorted(['bob', 'about', 'Zoo', 'Credit'], key=str.lower, reverse=True)
+
+匿名函数
+|————— lambda eg: lambda x: x + 2
+
+偏函数（Partial function）：函数的参数个数太多，需要简化时，使用functools.partial可以创建一个新的函数，这个新函数可以固定住原函数的部分参数，从而在调用时更简单。
+|————— int()函数可以把字符串转换为整数，当仅传入字符串时，int()函数默认按十进制转换
+|      |————— int('123456')
+|      |————— int('123456', base=8) 按八进制转换
+|      |————— int('123456', 2) 按二进制转换
+
+错误类型 raise TypeError('Error des'):
+|————— SyntaxError 语法错误
+|————— ZeroDivisionError 语法错误
+|————— NameError # name 'spam' is not defined
+|————— TypeError 类型错误
+|————— RuntimeError 超时
+|————— OSError OS
+|————— ValueError ValueError
+|————— IOError IO
+
+IO编程: Input/Output eg： io_py
+|————— 回调模式/轮询模式
 
 
 

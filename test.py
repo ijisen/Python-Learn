@@ -1,9 +1,15 @@
-def my_abe(x):
-    if isinstance(x, (int, float)):
-        return 1
-    if x < 0:
-        return -x
-    else:
-        return x
+#!/user/bin/python3
+# -*- coding: utf-8 -*-
+# fileName: test.py
 
-print(my_abe(-5))
+' a test module '
+__author__ = 'Michael Liao'
+
+import glob
+print(glob.glob('*.py'))
+
+from datetime import date
+print(date.today())
+
+import sys
+print(sys.version)
